@@ -17,21 +17,6 @@ router.get('/', async (req, res)=>{
     }
 })
 
-router.get('/', (req, res)=>{
-    const devices = [{
-        id: 123,
-        nome: "Geladeira",
-        kWh: 23,
-        corrente: 2.1,
-        voltagem: 127,
-        fp: 1
-    }]
-    res.json({
-        success: true,
-        devices: devices
-    })
-})
-
 router.post('/', async (req, res)=>{
     const novoDevice = new Device({
         nome: req.body.nome,
